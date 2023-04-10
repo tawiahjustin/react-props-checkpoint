@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import image from '../src/image/my-profile.jpeg'
+import Profile from './profile/profile'
+import './App.css'
+import { PropTypes } from 'prop-types'
 
 function App() {
+  const displayProfile = () => {
+    alert('Tehua Justin')
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      {/* props data*/}
+      <Profile
+        fullName='Tehua Justin'
+        profession='I am Software Developer'
+        bio='I am a creative Software Developer. I am an expert with Html, CSS, Javascript and React. I have experience two years experience working with these technologies and I have developed for fair number of client.'
+        displayProfile={displayProfile}
+      >
+        {/*childreen props*/}
+        <img src={image} />
+      </Profile>
     </div>
-  );
+  )
 }
-
-export default App;
+{
+  /*app component proptypes*/
+}
+App.propTypes = {
+  fullName: PropTypes.string,
+  profession: PropTypes.string,
+  bio: PropTypes.string,
+  displayProfile: PropTypes.func,
+}
+export default App
