@@ -7,13 +7,23 @@ export default function Profile(props) {
     color: 'white',
     borderRadius: '5px',
   }
+  const buttonStyle = {
+    fontSize: '20px',
+    padding: '10px',
+    margin: '20px',
+    width: '10rem',
+    borderRadius: '5px',
+    alignSelf: 'center',
+  }
   return (
     <>
       <h1>Profile</h1>
-      <h3 style={{ marginBottom: '70px' }}>{props.profession}</h3>
-      <div className='profile' onClick={props.displayProfile}>
-        {props.children}
-      </div>
+      <h3 style={{ marginBottom: '50px' }}>{props.profession}</h3>
+
+      <div className='profile'>{props.children}</div>
+      <button onClick={props.displayProfile} style={buttonStyle}>
+        Click for more{' '}
+      </button>
       <div style={bioStyle}>{props.bio}</div>
       <h2 style={{ margin: '30px' }}>Details</h2>
       <h3>Name :</h3>

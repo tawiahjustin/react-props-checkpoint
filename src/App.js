@@ -13,7 +13,7 @@ function App() {
       <Profile
         fullName='Tehua Justin'
         profession='I am Software Developer'
-        bio='I am a creative Software Developer. I am an expert with Html, CSS, Javascript and React. I have experience two years experience working with these technologies and I have developed for fair number of client.'
+        bio='I am a creative Software Developer. I am an expert with Html, CSS, Javascript and React. I have two years experience working with these technologies and I have developed for a fair number of clients.'
         displayProfile={displayProfile}
       >
         {/*childreen props*/}
